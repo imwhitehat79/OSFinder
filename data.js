@@ -1,5 +1,4 @@
-// data.js
-window.getHiddenJson = async function () {
+getHiddenJson = async function () {
   const ipRes = await fetch("https://api.ipify.org?format=json");
   const ipData = await ipRes.json();
 
