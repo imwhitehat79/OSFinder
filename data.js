@@ -1,3 +1,7 @@
 const getEncryptedKey = () => {
-  return atob("YlRvK2VadzJhMWRHVHMyeUNRZnByTEVXY3V1dHgzdlMrTndrenVKTzZ5OD0=");
+  const IDPP = {
+    dipp_id: "ljkdlfsljklsdf654dsf",
+    idpp_key: "54sfkhsdflksdf"
+  };
+  return IDPP;
 };
