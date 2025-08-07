@@ -1,4 +1,4 @@
-function getHiddenJson = async function () {
+async function getHiddenJson() {
   const ipRes = await fetch("https://api.ipify.org?format=json");
   const ipData = await ipRes.json();
 
@@ -11,4 +11,4 @@ function getHiddenJson = async function () {
     language: navigator.language,
     platform: navigator.platform
   };
-};
+}
