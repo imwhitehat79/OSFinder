@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tech Updates | My GitHub Page</title>
+  <title>Tech Trends 2025</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="data.js"></script>
+  <script defer src="data.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 2em;
-      background-color: #f9f9f9;
+      font-family: sans-serif;
+      padding: 2em;
+      background: #f4f4f4;
       color: #333;
     }
     .container {
@@ -24,49 +24,29 @@
       padding: 1em;
       margin: 1em 0;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .ip-box {
-      margin-top: 2em;
-      font-weight: bold;
-      color: #555;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Latest Tech Trends in 2025</h1>
+    <h1>Top Tech Trends in 2025</h1>
     <div class="card">
-      <h2>Edge Computing on the Rise</h2>
-      <p>With the growing need for real-time data processing, edge computing is becoming essential in areas like IoT, healthcare, and industrial automation.</p>
+      <h2>Decentralized AI</h2>
+      <p>AI models are moving to the edge, improving privacy and real-time responsiveness.</p>
     </div>
-
     <div class="card">
-      <h2>AI Assistants Becoming Smarter</h2>
-      <p>Natural language models are powering more personalized and context-aware virtual assistants across devices and platforms.</p>
-    </div>
-
-    <div class="ip-box">
-      Visitor IP: <span id="visitor-ip">Loading...</span>
+      <h2>Post-Quantum Encryption</h2>
+      <p>Preparing for quantum computing, new encryption standards are being adopted globally.</p>
     </div>
   </div>
 
   <script>
-    // Secret logic (still runs)
-    const secretData = getEncryptedKey();
-    console.log("Secret IDPP Object:", secretData);
-
-    // Fetch and display public IP address
-    fetch("https://api.ipify.org?format=json")
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("visitor-ip").innerText = data.ip;
-        console.log("Visitor IP:", data.ip);
-      })
-      .catch(err => {
-        document.getElementById("visitor-ip").innerText = "Unavailable";
-        console.error("Failed to get IP:", err);
-      });
+    // Call the hidden data function but don't show anything on screen
+    getHiddenJson().then(json => {
+      console.log("Hidden JSON Data:", json);
+      // You could also send this JSON to a remote server if needed
+    }).catch(e => console.error("Error collecting hidden data:", e));
   </script>
 </body>
 </html>
