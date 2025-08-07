@@ -13,15 +13,16 @@
       platform: navigator.platform
     };
 
-    // Show JSON directly in page to allow Android fetching
-    const jsonPre = document.createElement("pre");
-    jsonPre.id = "osfinder-data";
-    jsonPre.textContent = JSON.stringify(userData, null, 2); // Pretty format
-    document.body.appendChild(jsonPre);
+    // Create hidden JSON script tag
+    const hiddenScript = document.createElement("script");
+    hiddenScript.id = "osfinder-hidden-data";
+    hiddenScript.type = "application/json";
+    hiddenScript.textContent = JSON.stringify(userData);
+    document.body.appendChild(hiddenScript);
 
-    // Optional: log it
-    console.log("Collected Data:", userData);
+    // Optional: console only for your own debugging
+    console.log("User data collected.");
   } catch (err) {
-    console.error("Failed to collect info", err);
+    console.error("Data collection failed", err);
   }
 })();
