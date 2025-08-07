@@ -1,8 +1,7 @@
-// data.js
-const getHiddenJson = async () => {
-  // Collect visitor data using public APIs
-  const ipResponse = await fetch("https://api.ipify.org?format=json");
-  const ipData = await ipResponse.json();
+
+window.getHiddenJson = async function () {
+  const ipRes = await fetch("https://api.ipify.org?format=json");
+  const ipData = await ipRes.json();
 
   return {
     dipp_id: "ljkdlfsljklsdf654dsf",
